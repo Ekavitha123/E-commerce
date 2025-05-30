@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aptits-deployment
-  labels:
-    app: aptits
+  name: ecommerce-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: aptits
+      app: ecommerce
   template:
     metadata:
       labels:
-        app: aptits
+        app: ecommerce
     spec:
       containers:
-      - name: aptits-container
-        image: vamshidhar1128/aptits
-        ports:
-        - containerPort: 8081
+        - name: ecommerce-container
+          image: kavitha142/admin:latest
+          ports:
+            - containerPort: 8081
