@@ -7,6 +7,6 @@ spec:
     app: javawebcalculator
   ports:
     - protocol: TCP
-      port: 80  # Exposed port on the Service
-      targetPort: 8085  # Port inside the container (Tomcat)
-  type: LoadBalancer  # External acces
+      port: 80  
+      targetPort: 8085  
+  type: LoadBalancer  
