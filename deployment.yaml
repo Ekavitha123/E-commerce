@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tomcat-deployment
+  name: spring1-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: tomcat
+      app: spring1
   template:
     metadata:
       labels:
-        app: tomcat
+        app: spring1
     spec:
       containers:
-        - name: tomcat-container
-          image: kavitha142/tomcat:latest
+        - name: spring1-container
+          image: kavitha142/spring1:latest
           ports:
-            - containerPort: 8081
+            - containerPort: 8084
