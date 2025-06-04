@@ -1,12 +1,12 @@
 apiVersion: v1
-kind: Service
+kind: project
 metadata:
-  name: spring1-service
+  name: project-service
 spec:
   selector:
-    app: spring1
+    app: project
   ports:
     - protocol: TCP
       port: 80  
-      targetPort: 8084
+      targetPort: 8080
   type: LoadBalancer  
